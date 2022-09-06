@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/ch01/home/getPost/add")
+@WebServlet("/ch01/home/add")
 public class GetPost extends HttpServlet {
 	@Override
 	public void service(HttpServletRequest req, HttpServletResponse res) 

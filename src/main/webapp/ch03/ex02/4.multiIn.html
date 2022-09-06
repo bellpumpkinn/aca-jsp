@@ -1,0 +1,32 @@
+<meta charset='utf-8'/>
+<form action='4.multiOut.jsp'>
+	<fieldset>
+		<input type='checkbox' name='letter' value='politics'/>정치
+		<input type='checkbox' name='letter' value='economics'/>경제
+		<input type='checkbox' name='letter' value='culture'/>문화
+	</fieldset>
+	<fieldset>
+		<input type='radio' name='gender' value='male'/>남
+		<input type='radio' name='gender' value='female'/>여
+	</fieldset>
+	<fieldset>
+		<select name='job' multiple>
+			<option value='developer'>개발자</option>
+			<option value='planner'>기획자</option>
+			<option value='dba'>DBA</option>
+		</select>
+	</fieldset>
+	
+	<input type='submit'/>
+</form>
+
+<!-- 
+파라미터밸류가 멀티다.
+파라미터(name)는 1개.
+파라미터는 1개인데 파라미터밸류가 많으면 배열개념으로 생각.
+
+checkbox는 복수선택(비배타적)가능, radio는 단수선택(배타적)이라서
+radio는 멀티value가 나올수없다.
+
+화면쪽이 html, 서버쪽이 jsp
+ -->
