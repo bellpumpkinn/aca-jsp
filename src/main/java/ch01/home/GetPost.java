@@ -14,7 +14,7 @@ public class GetPost extends HttpServlet {
 	@Override
 	public void service(HttpServletRequest req, HttpServletResponse res) 
 		throws ServletException, IOException{
-		int num1 = 1;
+		int num1 = 1; 
 		int num2 = 2;
 		
 		res.setContentType("text/html; charset=utf-8"); 
