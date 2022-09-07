@@ -9,3 +9,7 @@
 	<li><%= request.getMethod() %></li> <!-- get방식과 post방식을 구분할 수 있습니다.-->
 	<li><%= request.getSession() %></li> <!-- 세션 객체를 얻습니다. -->
 </ul>
+
+<!-- 
+내장객체 request
+ -->
