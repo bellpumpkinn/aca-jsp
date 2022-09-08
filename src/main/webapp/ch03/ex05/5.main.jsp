@@ -1,0 +1,12 @@
+<%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
+<nav>
+	<a href='5.sessionA.jsp'>A</a> &nbsp;
+	<a href='5.sessionB.jsp'>B</a> &nbsp;
+	<a href='5.logout.jsp'>logout</a>
+</nav>
+
+<!-- 
+실행순서 a -> b -> logout -> b
+b 한석이가 보이다가 사라짐
+사라지면 null뜸.
+ -->
