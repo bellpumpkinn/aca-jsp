@@ -1,7 +1,17 @@
 <%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
-<a href='login.jsp'>login</a>
-
-
+<%
+	Object userId = session.getAttribute("userId");
+	if(userId == null) {  // 로그인 안했다를 표현
+%>
+		<a href='login.jsp'>login</a>
+<%
+	} else {
+%>
+		<%=userId %>님, 환영합니다. &nbsp;
+		<a href='logout.jsp'>로그아웃</a>
+<%
+	}
+%>
 <!-- 
 	과제
 	메인에서 로그인 링크를 누르면, 로그인 폼으로 이동한다.
