@@ -3,21 +3,29 @@
 <%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
 <%
 	String[] products = request.getParameterValues("product");
-
 	if(products != null && products.length > 0) {
-		List<String> cart = new ArrayList<>();
+		List<String> cart = null;
+		
+		Object cartObj = session.getAttribute("cart");
+		if(cartObj == null) {
+			cart = new ArrayList<>();
+			session.setAttribute("cart", cart);
+		} else cart = (List<String>)cartObj; 
 		
 		for(String product: products)
 			cart.add(product);
-		
-		session.setAttribute("cart", cart);
-		//"cart" 안에 cart안에 있는 0~여러개의 물품을 설정해줌.
+	} else {
+%>
+			<c:redirect url='main.jsp'>
+				<c:param name='msg' value='장바구니에 담을 물건을 선택하세요.'/>
+			</c:redirect>
+<% 
 	}
 %>
 <c:redirect url='cartOut.jsp'/>
-
-
 <!-- 
+	최초에드프로씨는 장바구니를 챙겨야함
+	2번째부터는 계속 재활용
  setAttribute() 메서드: 속성에 값 저장
 
  getAttribute() 메서드: 속성값 읽기
