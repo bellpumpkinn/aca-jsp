@@ -9,6 +9,6 @@ public class Employee {
 	
 	@Override
 	public String toString() {
-		return String.format("%d %s %s", empId, empName, hireDate);
+		return empId + ", " +  empName + ", " + hireDate;
 	}
 }
