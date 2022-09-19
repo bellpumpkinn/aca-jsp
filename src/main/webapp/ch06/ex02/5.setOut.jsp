@@ -6,6 +6,3 @@ ${pageScope.fruit} <br>
 ${requestScope.fruit} <br>
 ${sessionScope.fruit} <br>
 ${applicationScope.fruit}
-
-
-
